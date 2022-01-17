@@ -1,0 +1,12 @@
+import "tfrun"
+import "strings"
+
+destroy_status = tfrun.is_destroy
+
+# Prints status of the destroy plan if applied
+print("Status of Terraform Destroy is: ", destroy_status)
+
+# Main rule
+main = rule {
+  destroy_status is false
+}
